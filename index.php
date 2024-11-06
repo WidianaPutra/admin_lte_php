@@ -1,5 +1,7 @@
 <?php
+include "./db/db.php";
 include("./partial/header.php");
+
 if (isset($_GET['f'])) {
   //
 }
@@ -35,6 +37,7 @@ if (isset($_GET['f'])) {
 
     <!-- footer -->
     <?php include("./partial/footer.php") ?>
+
     <!-- /footer -->
   </div>
 

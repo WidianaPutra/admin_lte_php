@@ -1,7 +1,7 @@
 <?php
 $conn = new mysqli("localhost", "suriya", "surya15022005", "data_sekolah");
 
-function querytoDbReturn($query)
+function querytoDb($query)
 {
   global $conn;
   $result = mysqli_query($conn, $query);
@@ -10,10 +10,4 @@ function querytoDbReturn($query)
     $rows[] = $row;
   }
   return $rows;
-}
-
-function queryToDb($query)
-{
-  global $conn;
-  return mysqli_query($conn, $query);
 }

@@ -31,5 +31,4 @@
 <!-- <script src="dist/js/demo.js"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!-- sweetalert -->
-<script src="plugins/sweetAlert/sweetalert.js"></script>
 <!-- <script src="dist/js/pages/dashboard.js"></script> -->
