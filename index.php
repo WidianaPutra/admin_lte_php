@@ -1,4 +1,6 @@
 <?php
+include "./authentication/auth.php";
+include "./authentication.php";
 include "./db/db.php";
 include("./partial/header.php");
 
@@ -25,7 +27,7 @@ if (isset($_GET['f'])) {
     } elseif (isset($_GET['form'])) {
       include("./contains/form.php");
     } elseif (isset($_GET['table'])) {
-      include("./contains/table.php");
+      include("./contains/tables.php");
     } elseif (isset($_GET['edit'])) {
       include("./contains/edit.php");
     } else {

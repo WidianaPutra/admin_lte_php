@@ -49,7 +49,7 @@ $datas = [
         <?php endforeach; ?>
       </div>
     </div><!-- /.container-fluid -->
-    <?php include("./contains/table.php") ?>
+    <?php include("./contains/table_dashboard.php") ?>
   </section>
   <!-- /.content -->
 </div>

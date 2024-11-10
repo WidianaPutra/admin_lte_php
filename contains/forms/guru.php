@@ -10,11 +10,17 @@ if (isset($_POST['submit'])) {
   $noTlp = $_POST['noTlp'];
   $kelas = $_POST['kelas'];
 
-  $sql = "SELECT * FROM guru WHERE kode_guru = '$kode_guru' AND email='$email'";
+  $sql = "SELECT * FROM guru WHERE code_guru = '$kode_guru' AND email='$email'";
   $result = $conn->query($sql);
 
   if ($result->num_rows === 0) {
+    $sql = "INSERT INTO guru (id, code_guru, nama, alamat, JK, email, telepon, kelas)
+    VALUES ('','$kode_guru','$nama','$alamat','$jenisKelamin','$email','$noTlp','$kelas')";
 
+    $result = $conn->query($sql);
+    if ($result) {
+      showAlert("Sukses", "Data tersimpan", "success");
+    }
   } else {
     showAlert("Error", "Data sudah ada", "error");
   }
@@ -23,7 +29,7 @@ if (isset($_POST['submit'])) {
 
 <div class="content-wrapper px-2">
   <div class="container mt-3 mb-3">
-    <h2 class="mb-4">Form Data Siswa</h2>
+    <h2 class="mb-4">Form Data Guru</h2>
     <form method="POST">
       <!-- NIS -->
       <div class="mb-3">

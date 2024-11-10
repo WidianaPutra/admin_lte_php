@@ -1,0 +1,3 @@
+cookie:
+  account_id
+  username

@@ -1,9 +1,9 @@
 <?php
 require("./db/db.php");
-$siswa = querytoDbReturn("SELECT * FROM siswa");
-$guru = querytoDbReturn("SELECT * FROM guru");
-$kelas = querytoDbReturn("SELECT * FROM kelas");
-$jurusan = querytoDbReturn("SELECT * FROM kejuruan");
+$siswa = querytoDb("SELECT * FROM siswa");
+$guru = querytoDb("SELECT * FROM guru");
+$kelas = querytoDb("SELECT * FROM kelas");
+$jurusan = querytoDb("SELECT * FROM kejuruan");
 
 $datas = [
   ["title" => "Siswa", "data" => $siswa, "color" => "bg-info"],

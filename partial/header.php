@@ -30,6 +30,7 @@
   <!-- swal -->
   <script src="plugins/sweetAlert/swal.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
-
+  <!-- jquery -->
+  <script src="./plugins/jquery/jquery.js"></script>
 
 </head>

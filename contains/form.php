@@ -9,7 +9,7 @@ if (isset($_GET['form'])) {
   } elseif ($queryURL == "guru") {
     include "./contains/forms/guru.php";
   } elseif ($queryURL == "jurusan") {
-    include "./contains/tables/jurusan.php";
+    include "./contains/forms/jurusan.php";
   } elseif ($queryURL == "kelas") {
     include "./contains/forms/kelas.php";
   } else {
