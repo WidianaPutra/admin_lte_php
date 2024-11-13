@@ -1,11 +1,11 @@
 <?php
-include "./authentication/auth.php";
-include "./authentication.php";
+// include "./authentication/auth.php"; // authentication code
+// include "./authentication.php"; // login and register route
 include "./db/db.php";
 include("./partial/header.php");
 
-if (isset($_GET['f'])) {
-  //
+if (isset($_COOKIE['account_id']) && isset($_COOKIE['username'])) {
+
 }
 ?>
 

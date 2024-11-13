@@ -1,14 +1,22 @@
 <?php
-if (isset($_COOKIE['account_id']) && isset($_COOKIE['username'])) {
-  $account_id = $_COOKIE['account_id'];
-  $username = $_COOKIE['username'];
-  $query = $conn->query("SELECT * FROM sessions WHERE account_id = '$account_id'");
-  $result = $query->fetch_assoc();
+session_start();
 
-  if ($query->num_rows > 0 && $username === $result['username']) {
-    return header("Location ./");
+if (isset($_SESSION['account_id']) && isset($_SESSION['id'])) {
+  // if (isset($_COOKIE['account_id']) && isset($_COOKIE['username'])) {
+  $account_id = $_SESSION['account_id'];
+  $username = $_SESSION['username'];
+
+  $query = $conn->query("SELECT * FROM sessions WHERE account_id = '$account_id' AND username = '$username'");
+
+  if ($query->num_rows > 0) {
+    header("Location: ./");
+    exit();
+  } else {
+    header("Location: ./authentication.php");
+    exit();
   }
-
-  return header("Location: ./authentication.php");
-} else
+  // }
+} else {
   header("Location: ./authentication.php");
+  exit();
+}
