@@ -22,9 +22,8 @@ $datas = querytoDb("SELECT * FROM kejuruan");
           <td><?= $data['code'] ?></td>
           <td><?= $data['singkatan'] ?></td>
           <td class="d-flex align-items-center justify-content-center">
-            <button class="edit bg-success px-3 py-2 rounded" style="border: none;">
-              <i class='fas fa-edit' style="color: #fff;" index="
-            <?= $data['code'] ?>"></i>
+            <button class="edit bg-success px-3 py-2 rounded" style="border: none;" index="<?= $data['code'] ?>">
+              <i class='fas fa-edit' style="color: #fff;"></i>
             </button>
             <p class="px-3 rounded">|</p>
             <button class="delete bg-danger px-3 py-2 rounded" style="border: none;" index="<?= $data['code'] ?>">
@@ -40,6 +39,7 @@ $datas = querytoDb("SELECT * FROM kejuruan");
 <script>
   $("button.edit").click(function () {
     const code_jurusan = $(this).attr('index');
+    window.location.href = `./?edit=jurusan&key=${code_jurusan}`;
   })
 
   $("button.delete").click(function () {

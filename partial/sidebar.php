@@ -5,15 +5,16 @@ include("./data/sidebarData.php")
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="" class="brand-link">
-    <span class="brand-text font-weight-light">Acumalaka</span>
+    <span class="brand-text font-weight-light">Martinator School #89</span>
   </a>
 
   <!-- Sidebar -->
   <div class="sidebar">
     <!-- Sidebar user panel (optional) -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
       <div class="image">
-        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        <img src="dist/img/th.jpg" alt="User Image"
+          style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%;">
       </div>
       <div class="info">
         <a href="#" class="d-block">Jorge Martin #89</a>
