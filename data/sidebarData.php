@@ -30,14 +30,4 @@ $datas = [
       ["menu" => "Kelas", "link" => "?table=Kelas"]
     ]
   ],
-  // [
-  //   "title" => "Edit",
-  //   "icon" => "nav-icon fas fa-pen",
-  //   "data" => [
-  //     ["menu" => "Siswa", "link" => "?edit=siswa"],
-  //     ["menu" => "Guru", "link" => "?edit=guru"],
-  //     ["menu" => "Jurusan", "link" => "?edit=Jurusan"],
-  //     ["menu" => "Kelas", "link" => "?edit=Kelas"]
-  //   ]
-  // ],
 ];

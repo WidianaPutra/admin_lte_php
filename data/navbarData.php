@@ -3,10 +3,10 @@
 $datas = [
   [
     "title" => "Home",
-    "linkTo" => "#"
+    "linkTo" => "./"
   ],
   [
-    "title" => "Contect",
-    "linkTo" => "#"
+    "title" => "Pelanggaran",
+    "linkTo" => "./?pelanggaran"
   ],
 ];

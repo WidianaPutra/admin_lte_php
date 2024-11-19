@@ -6,10 +6,8 @@ $nis = $_GET['key'];
 $data_kelas = querytoDb("SELECT * FROM kelas");
 $data_siswa = querytoDb("SELECT * FROM siswa LEFT JOIN kelas ON siswa.kelas = kelas.kode_kelas WHERE nis='$nis'");
 
-$r = $data_siswa[0]['JK'] === "Laki-Laki";
-
 if (isset($_POST['submit'])) {
-  $nis = $_POST['nis'];
+  $niss = $_POST['nis'];
   $nama = $_POST['nama'];
   $alamat = $_POST['alamat'];
   $jenisKelamin = $_POST['jenisKelamin'];
@@ -18,8 +16,9 @@ if (isset($_POST['submit'])) {
   $kelas = $_POST['kelas'];
 
   if (!(empty($nis) && empty($nama) && empty($alamat) && empty($jenisKelamin) && empty($email) && empty($noTlp) && empty($kelas))) {
-    $sql = "UPDATE siswa SET nama='$nama', alamat='$alamat', JK='$jenisKelamin', email='$email', telepon='$noTlp', kelas='$kelas' WHERE nis='$nis'";
+    $sql = "UPDATE siswa SET nis='$niss', nama='$nama', alamat='$alamat', JK='$jenisKelamin', email='$email', telepon='$noTlp', kelas='$kelas' WHERE nis='$nis'";
     $result = $conn->query($sql);
+    echo $nis;
 
     showAlert("Berhasil", "Berhasil mengubah data", "success");
     echo "<script>

@@ -30,6 +30,8 @@ if (isset($_COOKIE['account_id']) && isset($_COOKIE['username'])) {
       include("./contains/tables.php");
     } elseif (isset($_GET['edit'])) {
       include("./contains/edit.php");
+    } elseif (isset($_GET['pelanggaran'])) {
+      include "./contains/pelanggaran.php";
     } else {
       include("./contains/dashboard.php");
     }

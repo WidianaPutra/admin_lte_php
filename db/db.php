@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "suriya", "surya15022005", "data_sekolah");
+$conn = new mysqli("localhost", "root", "", "data_sekolah");
 
 function querytoDb($query)
 {
